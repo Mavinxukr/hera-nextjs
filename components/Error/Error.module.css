@@ -1,0 +1,19 @@
+.error {
+  margin-top: 5px;
+  color: red;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justyfy {
+  text-align: justify;
+}

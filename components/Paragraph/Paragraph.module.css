@@ -1,0 +1,30 @@
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.94px;
+  margin: 0;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justyfy {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.5px;
+    margin: 0;
+  }
+}

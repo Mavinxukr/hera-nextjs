@@ -1,0 +1,123 @@
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+.reverse > .section__info {
+  margin-right: 0;
+  margin-left: auto;
+}
+.reverse > .section__image {
+  margin-right: 20px;
+}
+
+.section__info {
+  flex-shrink: 1;
+  max-width: 575px;
+  margin-right: 20px;
+}
+
+h2.section__title {
+  margin-bottom: 15px;
+}
+
+.section__image {
+  margin-left: auto;
+  position: relative;
+  flex-shrink: 2;
+  width: 100%;
+  max-width: 577px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+.section__image > div {
+  min-width: 242px !important;
+  margin: 0 auto !important;
+}
+
+.section__img {
+  position: absolute;
+  top: 50%;
+  transition: transform 0.3s;
+  will-change: transform;
+  transform: translate3D(0, -50%, -100px);
+}
+.section__img--left {
+  left: 0;
+}
+.section__img--right {
+  right: 0;
+}
+.section__preview {
+  display: block;
+  margin: 0 auto;
+  z-index: 1000;
+  max-width: 400px;
+  will-change: transform;
+  transition: transform 0.3s;
+}
+
+.section__image:hover .section__img--left {
+  transform: translate3d(-10px, -50%, -100px);
+}
+.section__image:hover .section__img--right {
+  transform: translate3d(10px, -50%, -100px);
+}
+.section__image:hover .section__preview {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .section__info {
+    flex-shrink: 1;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .section__img {
+    width: 120px;
+  }
+  .section__preview {
+    max-width: 242px;
+  }
+
+  .section__image {
+    max-width: 50%;
+    min-width: auto;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__info {
+    flex-shrink: 1;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .section__img {
+    width: 120px;
+  }
+  .section__preview {
+    width: 242px;
+  }
+  .section__image > div {
+    max-width: 242px !important;
+  }
+
+  .section__image {
+    max-width: 375px;
+    min-width: auto;
+    margin-left: 0;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+}

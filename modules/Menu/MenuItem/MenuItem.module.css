@@ -1,0 +1,33 @@
+.menu-item {
+  line-height: 19px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.menu-item + .menu-item {
+  margin-left: 20px;
+}
+.menu-link {
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.menu-link::before {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 2px;
+  width: 100%;
+  background-color: #ef9fd9;
+  transition: 0.3s;
+}
+.menu-link:hover {
+  color: #e5e5e5;
+}
+.menu-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+}

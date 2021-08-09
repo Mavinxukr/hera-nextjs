@@ -1,0 +1,8 @@
+.light-header {
+  margin-top: 80px;
+}
+.light-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
