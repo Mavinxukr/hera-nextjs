@@ -4,4 +4,5 @@ export interface MenuItemProps extends DetailedHTMLProps<HTMLAttributes<HTMLLIEl
     _id: number;
     name: string;
     href: string;
+    t: 'dark' | 'light';
  }

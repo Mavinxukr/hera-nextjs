@@ -1,0 +1,14 @@
+.list {
+  width: 100%;
+  display: flex;
+  margin-left: -20px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 550px) {
+  .list {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+}

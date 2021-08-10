@@ -1,6 +1,6 @@
 import React from "react";
 import { ContainerSmall } from "../../../modules/ContainerSmall/ContainerSmall";
-import { LightHeader } from "../../../modules/LightHeader/LightHeader";
+import { HeaderLight } from "../../../modules/HeaderLight/HeaderLight";
 import { Htag } from "../../Htag/Htag";
 import { Paragraph } from "../../Paragraph/Paragraph";
 import { Subscribe } from "../../Subscribe/Subscribe";
@@ -10,7 +10,7 @@ import styles from "./PrivacyPage.module.css";
 export const PrivacyPage = (): JSX.Element => {
   return (
     <>
-      <LightHeader />
+      <HeaderLight />
       <ContainerSmall className={styles.container}>
         <Htag className={styles.title} tag="h1" align="center">
           PRIVACY NOTICE

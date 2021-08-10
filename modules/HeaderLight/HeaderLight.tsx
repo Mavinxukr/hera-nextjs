@@ -3,9 +3,9 @@ import { Container } from "../Container/Container";
 import { Logo } from "../../components/Logo/Logo";
 import { Button } from "../../components/Button/Button";
 
-import styles from "./LightHeader.module.css";
+import styles from "./HeaderLight.module.css";
 
-export const LightHeader = (): JSX.Element => {
+export const HeaderLight = (): JSX.Element => {
   return (
     <Container>
       <header className={styles["light-header"]}>

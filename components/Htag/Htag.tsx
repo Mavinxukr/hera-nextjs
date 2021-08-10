@@ -22,7 +22,9 @@ export const Htag = ({
         <h3 className={cn(styles.h3, styles[align], className)}>{children}</h3>
       );
     case "h4":
-      return <h4 className={cn(styles[align], className)}>{children}</h4>;
+      return (
+        <h4 className={cn(styles.h4, styles[align], className)}>{children}</h4>
+      );
     case "h5":
       return <h5 className={cn(styles[align], className)}>{children}</h5>;
     case "h6":

@@ -14,8 +14,8 @@ const postCreateSchema = yup.object().shape({
 });
 
 export const Subscribe = (): JSX.Element => {
-  const [response, setResponse] = useState({});
-  const [serverErr, setServerErr] = useState(null);
+  const [response, setResponse] = useState<any>();
+  const [serverErr, setServerErr] = useState<any>(null);
 
   const {
     register,
@@ -32,7 +32,7 @@ export const Subscribe = (): JSX.Element => {
   };
 
   useEffect(() => {
-    if (String(response?.status).startsWith("2")) {
+    if (response && String(response?.status).startsWith("2")) {
       setServerErr(null);
       setValue("email", "");
     } else {

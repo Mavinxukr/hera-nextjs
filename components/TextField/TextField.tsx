@@ -6,7 +6,7 @@ import cn from "classnames";
 
 const TextField = forwardRef<HTMLInputElement, ITextField>(
   (
-    { label, error, message, className, disabled, maxLength, ...props },
+    { label, error, message, className, disabled, maxLength, render, ...props },
     ref
   ) => {
     return (
@@ -21,6 +21,7 @@ const TextField = forwardRef<HTMLInputElement, ITextField>(
           maxLength={maxLength}
           {...props}
         />
+        {render ? render() : null}
         {error && <Error>{message}</Error>}
       </div>
     );

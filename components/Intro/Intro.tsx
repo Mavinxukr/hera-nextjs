@@ -18,6 +18,7 @@ export const Intro = (): JSX.Element => {
           list={[
             { _id: 1, name: "about", href: "#about" },
             { _id: 2, name: "subscribe", href: "#subscribe" },
+            { _id: 3, name: "blog", href: "/blog" },
           ]}
         />
         <div className={styles["intro__description"]}>

@@ -1,12 +1,24 @@
 import styles from "./MenuItem.module.css";
 import { MenuItemProps } from "./MenuItem.props";
+import cn from "classnames";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-export const MenuItem = ({ name, href }: MenuItemProps): JSX.Element => {
+export const MenuItem = ({ name, href, t }: MenuItemProps): JSX.Element => {
+  const router = useRouter();
+
   return (
     <li className={styles["menu-item"]}>
-      <a className={styles["menu-link"]} href={href}>
-        {name}
-      </a>
+      <Link href={href}>
+        <a
+          className={cn(styles["menu-link"], {
+            [styles.dark]: t === "dark",
+            [styles.active]: router.route === href,
+          })}
+        >
+          {name}
+        </a>
+      </Link>
     </li>
   );
 };

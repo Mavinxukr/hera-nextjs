@@ -1,0 +1,54 @@
+.pagination {
+  display: block;
+}
+.containerClassName {
+  display: flex;
+}
+.pageClassName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pageClassName.activeClassName {
+  background: var(--pink);
+}
+.pageClassName.activeClassName .pageLinkClassName {
+  color: var(--white);
+}
+.pageClassName.pageClassName {
+  margin-left: 10px;
+}
+.pageLinkClassName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 7px;
+  min-width: 20px;
+  height: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--darkBlue);
+}
+
+.previousClassName,
+.nextClassName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.previousClassName .previousLinkClassName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nextClassName .nextLinkClassName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

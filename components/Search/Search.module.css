@@ -1,0 +1,27 @@
+.search {
+  max-width: 171px;
+  position: relative;
+  overflow: hidden;
+}
+.search > input {
+  border-radius: 0;
+  border: none;
+  padding-left: 0;
+  border-bottom: 1px solid var(--text);
+  transition: 0.2s;
+  outline: none;
+}
+.search.appearance > input {
+  border-bottom: 1px solid var(--pink);
+}
+.search svg {
+  position: absolute;
+  transition: 0.2s;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search svg.appearance {
+  transform: translateY(-50%) translateX(100px);
+}

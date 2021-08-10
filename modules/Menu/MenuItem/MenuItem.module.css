@@ -8,10 +8,18 @@
 }
 .menu-link {
   position: relative;
-  color: #fff;
+  color: var(--white);
   transition: 0.3s;
 }
-
+.menu-link.dark {
+  color: var(--darkGray);
+}
+.menu-link.dark:hover {
+  color: var(--text);
+}
+.menu-link.dark.active {
+  color: var(--text);
+}
 .menu-link::before {
   position: absolute;
   content: "";
