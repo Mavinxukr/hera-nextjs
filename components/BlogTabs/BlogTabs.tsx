@@ -8,7 +8,7 @@ export const BlogTabs = ({ tabs }: BlogTabsProps): JSX.Element => {
     <div className={styles.wrapper}>
       <ul className={styles.list}>
         {tabs.map((tab: ITab) => (
-          <BlogTab {...tab} />
+          <BlogTab key={tab.id} {...tab} />
         ))}
       </ul>
     </div>

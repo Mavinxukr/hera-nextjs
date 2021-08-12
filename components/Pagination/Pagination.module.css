@@ -41,6 +41,9 @@
   align-items: center;
   cursor: pointer;
 }
+.nextClassName {
+  margin-left: 10px;
+}
 .previousClassName .previousLinkClassName {
   display: flex;
   justify-content: center;

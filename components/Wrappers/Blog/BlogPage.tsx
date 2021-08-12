@@ -11,18 +11,23 @@ import { BlogTabs } from "../../BlogTabs/BlogTabs";
 export const BlogPage = (): JSX.Element => {
   const tabs = [
     {
+      id: 1,
       name: "All",
     },
     {
+      id: 2,
       name: "Baby Development",
     },
     {
+      id: 3,
       name: "Baby Names",
     },
     {
+      id: 4,
       name: "Multiples",
     },
     {
+      id: 5,
       name: "Baby Symptoms ",
     },
   ];
@@ -36,31 +41,31 @@ export const BlogPage = (): JSX.Element => {
         </div>
         <BlogsList>
           <BlogPreview
-            href={"/"}
+            href={"/blog/qwe"}
             img={"/BlogPeeview.png"}
             date="Add 13 May 2021"
             title="Baby Names"
           />
           <BlogPreview
-            href={"/"}
+            href={"/qwe"}
             img={"/BlogPeeview.png"}
             date="Add 13 May 2021"
             title="Baby Names"
           />
           <BlogPreview
-            href={"/"}
+            href={"/blog/qwe"}
             img={"/BlogPeeview.png"}
             date="Add 13 May 2021"
             title="Baby Names"
           />
           <BlogPreview
-            href={"/"}
+            href={"/blog/qwe"}
             img={"/BlogPeeview.png"}
             date="Add 13 May 2021"
             title="Baby Names"
           />
           <BlogPreview
-            href={"/"}
+            href={"/blog/qwe"}
             img={"/BlogPeeview.png"}
             date="Add 13 May 2021"
             title="Baby Names"

@@ -1,0 +1,14 @@
+.crumbs {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.crumb {
+  color: var(--darkGray);
+}
+.link {
+  color: var(--black);
+}
+
+.split {
+  margin: 0 4px;
+}

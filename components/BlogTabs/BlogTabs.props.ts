@@ -1,7 +1,8 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 export interface ITab{
-    name: string
+    id: number;
+    name: string;
 }
 
 export interface BlogTabsProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

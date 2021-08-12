@@ -1,0 +1,42 @@
+.post {
+  margin: 0 auto;
+  max-width: 948px;
+  margin-bottom: 44px;
+}
+
+.post__crumbs {
+  margin-top: 20px;
+}
+.post__body {
+  display: flex;
+  margin-top: 60px;
+}
+h2.post__title {
+  margin-bottom: 50px;
+}
+
+.content {
+  flex-basis: calc(100% - 305px);
+  flex-shrink: 1;
+  margin-right: 30px;
+}
+
+.sidebar {
+  flex-basis: 275px;
+  flex-shrink: 1;
+}
+
+@media (max-width: 900px) {
+  .post__body {
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
+  .sidebar {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .content {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
