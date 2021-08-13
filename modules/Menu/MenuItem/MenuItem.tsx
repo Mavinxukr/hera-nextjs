@@ -6,14 +6,14 @@ import Link from "next/link";
 
 export const MenuItem = ({ name, href, t }: MenuItemProps): JSX.Element => {
   const router = useRouter();
-
   return (
     <li className={styles["menu-item"]}>
       <Link href={href}>
         <a
           className={cn(styles["menu-link"], {
             [styles.dark]: t === "dark",
-            [styles.active]: router.route === href,
+            [styles.light]: t === "light",
+            [styles.active]: router.route.startsWith(href),
           })}
         >
           {name}

@@ -7,7 +7,7 @@ export interface ITextField extends React.HTMLAttributes<HTMLInputElement> {
     disabled?: boolean;
     fullWidth?: boolean;
     name?: string;
-    render: () => ReactNode;
+    render?: () => ReactNode;
     type?: "text" | "password" | "email" | "time";
     readonly?: boolean;
     maxLength?: number;

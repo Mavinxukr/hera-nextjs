@@ -10,7 +10,6 @@ export const Pagination: React.FC<IPaginate> = ({
   marginPagesDisplayed,
   pageRangeDisplayed,
   pageCount,
-  children,
   className,
   ...props
 }) => {

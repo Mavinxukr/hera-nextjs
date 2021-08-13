@@ -1,6 +1,5 @@
 import { BlogPreviewProps } from "./BlogPreview.props";
 import styles from "./BlogPreview.module.css";
-import AppleIcon from "./apple.svg";
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +11,6 @@ export const BlogPreview = ({
   title,
   className,
   href,
-  ...props
 }: BlogPreviewProps): JSX.Element => {
   return (
     <section className={cn(styles.card, className)}>

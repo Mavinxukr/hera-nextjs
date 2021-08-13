@@ -3,7 +3,13 @@ import TextField from "../TextField/TextField";
 import styles from "./Search.module.css";
 import SearchIcon from "../../public/svg/search.svg";
 import cn from "classnames";
-export const Search = ({ changeHandle }) => {
+
+interface ISearch {
+  changeHandle: (ev: React.SyntheticEvent<EventTarget>) => void;
+}
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const Search = ({ changeHandle }: ISearch) => {
   const [focus, setFocus] = useState(false);
 
   return (

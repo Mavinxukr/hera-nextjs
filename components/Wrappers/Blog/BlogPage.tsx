@@ -7,69 +7,51 @@ import { Pagination } from "../../Pagination/Pagination";
 import styles from "./BlogPage.module.css";
 import { Search } from "../../Search/Search";
 import { BlogTabs } from "../../BlogTabs/BlogTabs";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { BlogProps } from "../../../interface/blog.interface";
+import tabs from "./tabs";
 
-export const BlogPage = (): JSX.Element => {
-  const tabs = [
-    {
-      id: 1,
-      name: "All",
-    },
-    {
-      id: 2,
-      name: "Baby Development",
-    },
-    {
-      id: 3,
-      name: "Baby Names",
-    },
-    {
-      id: 4,
-      name: "Multiples",
-    },
-    {
-      id: 5,
-      name: "Baby Symptoms ",
-    },
-  ];
+export const BlogPage = ({ posts }: BlogProps): JSX.Element => {
+  const [activeTab, setActiveTab] = useState("All");
+  const [updateData, setUpdateDate] = useState(false);
+  const router = useRouter();
+  const setTab = (slug: string) => {
+    const url = `${router.route}?sort=${slug}`;
+    router.replace(url);
+  };
+
+  useEffect(() => {
+    const filters = router.query;
+    console.log("fetch posts by filter", filters);
+  }, []);
+
+  useEffect(() => {
+    if (updateData) {
+      setActiveTab("fetch posts");
+    } else {
+      setUpdateDate(true);
+    }
+  }, [router.query]);
+
   return (
     <>
       <Header />
       <Container>
         <div className={styles.navigation}>
-          <BlogTabs tabs={tabs} />
-          <Search changeHandle={(ev) => console.log(ev.target.value)} />
+          <BlogTabs setTab={setTab} tabs={tabs} active={activeTab} />
+          <Search changeHandle={(ev) => console.log(ev.target)} />
         </div>
         <BlogsList>
-          <BlogPreview
-            href={"/blog/qwe"}
-            img={"/BlogPeeview.png"}
-            date="Add 13 May 2021"
-            title="Baby Names"
-          />
-          <BlogPreview
-            href={"/qwe"}
-            img={"/BlogPeeview.png"}
-            date="Add 13 May 2021"
-            title="Baby Names"
-          />
-          <BlogPreview
-            href={"/blog/qwe"}
-            img={"/BlogPeeview.png"}
-            date="Add 13 May 2021"
-            title="Baby Names"
-          />
-          <BlogPreview
-            href={"/blog/qwe"}
-            img={"/BlogPeeview.png"}
-            date="Add 13 May 2021"
-            title="Baby Names"
-          />
-          <BlogPreview
-            href={"/blog/qwe"}
-            img={"/BlogPeeview.png"}
-            date="Add 13 May 2021"
-            title="Baby Names"
-          />
+          {posts.map((post) => (
+            <BlogPreview
+              key={post._id}
+              href={post.path}
+              img={post.preview}
+              date={post.date}
+              title={post.title}
+            />
+          ))}
         </BlogsList>
         <div className={styles.paginationWrapper}>
           <Pagination

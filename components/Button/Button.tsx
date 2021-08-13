@@ -5,7 +5,6 @@ import cn from "classnames";
 
 export const Button = ({
   appearance,
-  icon = "apple",
   children,
   className,
   href,

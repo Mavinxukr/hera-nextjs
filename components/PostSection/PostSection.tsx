@@ -14,14 +14,18 @@ export const PostSection = ({
   text,
   img,
 }: IArticleSection): JSX.Element => {
-  const section = useRef<HTMLDivElement>(null);
+  const section = useRef<HTMLDivElement | null>(null);
 
   const paragraphs = text.split(/[\r\n]+/g);
 
   useScrollPosition(() => {
-    let position = section.current.getBoundingClientRect();
+    let position = null;
 
-    if (position.top <= 1 && position.top + position.height >= 0) {
+    if (section && section.current) {
+      position = section.current.getBoundingClientRect();
+    }
+
+    if (position && position.top <= 1 && position.top + position.height >= 0) {
       setIndex(index + 1);
     }
   });

@@ -17,10 +17,10 @@ export const Header = ({ background }: HeaderProps): JSX.Element => {
         )}
         <Logo />
         <Menu
-          color="dark"
+          color={background ? "light" : "dark"}
           list={[
-            { _id: 1, name: "about", href: "#about" },
-            { _id: 2, name: "subscribe", href: "#subscribe" },
+            { _id: 1, name: "about", href: "/#about" },
+            { _id: 2, name: "subscribe", href: "/#subscribe" },
             { _id: 3, name: "blog", href: "/blog" },
           ]}
         />

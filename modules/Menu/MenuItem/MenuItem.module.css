@@ -20,6 +20,15 @@
 .menu-link.dark.active {
   color: var(--text);
 }
+.menu-link.light {
+  color: var(--darkGray);
+}
+.menu-link.light:hover {
+  color: var(--white);
+}
+.menu-link.light.active {
+  color: var(--white);
+}
 .menu-link::before {
   position: absolute;
   content: "";

@@ -4,7 +4,6 @@ import { Htag } from "../Htag/Htag";
 import { Paragraph } from "../Paragraph/Paragraph";
 import Image from "next/image";
 import cn from "classnames";
-import { Loader } from "../Loader/Loader";
 
 export const IntroSection = ({
   title,

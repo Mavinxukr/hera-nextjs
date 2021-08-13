@@ -4,7 +4,7 @@ import { Logo } from "../Logo/Logo";
 import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./Thanks.module.css";
 
-export const Thanks = () => {
+export const Thanks = (): JSX.Element => {
   return (
     <>
       <Logo />
