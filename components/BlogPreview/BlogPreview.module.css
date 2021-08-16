@@ -23,7 +23,7 @@
 
 .image {
   width: 100%;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .image:hover {
   transform: scale(1.05);

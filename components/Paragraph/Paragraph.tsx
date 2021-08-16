@@ -8,6 +8,8 @@ export const Paragraph = ({
   className,
 }: ParagraphProps): JSX.Element => {
   return (
-    <p className={cn(styles.paragraph, styles[align], className)}>{children}</p>
+    <p tabIndex={0} className={cn(styles.paragraph, styles[align], className)}>
+      {children}
+    </p>
   );
 };

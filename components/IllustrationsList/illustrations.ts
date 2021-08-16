@@ -1,1 +1,1 @@
-export const illustrations = ["/1.png","/2.png","/3.png","/4.png","/5.png","/6.png","/7.png","/8.png"];
+export const illustrations = [{src: "/1.png", name: "pregnancy"},{src: "/2.png", name: "meditation"},{src: "/3.png", name: "beauty"},{src: "/4.png", name: "health"},{src: "/5.png", name: "relax"},{src: "/6.png", name: "eating"},{src: "/7.png", name: "cooking"},{src: "/8.png", name: "work"}];

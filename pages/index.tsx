@@ -22,6 +22,10 @@ function Home(): JSX.Element {
           property="og:image:alt"
           content="NOURISH YOUR MIND, BODY AND SOUL, THROUGHOUT PREGNANCY AND MOTHERHOOD."
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
+        ></meta>
         <meta property="og:type" content="product" />
         <meta property="og:description" content="the Hera app" />
         <meta name="description" content="the Hera app" />

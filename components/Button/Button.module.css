@@ -9,7 +9,8 @@
 }
 
 .primary {
-  background-color: #ef9fd9;
+  background-color: var(--pink);
+  transition: 0.3s;
   color: #fff;
   border-radius: 12px;
   border: none;
@@ -18,7 +19,7 @@
   font-weight: 600;
 }
 .primary:hover {
-  background-color: #e592ce;
+  background-color: #df59b9;
 }
 .social {
   background: #f5f5f5;

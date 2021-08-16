@@ -17,6 +17,8 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
               <a
                 href="https://www.instagram.com/theheraapp/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
                 className={styles["footer__social__link"]}
               >
                 <InstagramIcon />
@@ -26,6 +28,8 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
                 className={styles["footer__social__link"]}
               >
                 <FacebookIcon />

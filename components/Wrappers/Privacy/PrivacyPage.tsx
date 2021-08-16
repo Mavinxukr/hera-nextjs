@@ -25,14 +25,18 @@ export const PrivacyPage = (): JSX.Element => {
             personal information and your right to privacy. If you have any
             questions or concerns about this privacy notice, or our practices
             with regards to your personal information, please contact us at
-            <a href="mailto:melanie@theheraapp.com">
+            <a rel="noopener noreferrer" href="mailto:melanie@theheraapp.com">
               &nbsp;melanie@theheraapp.com
             </a>
             .
           </Paragraph>
           <Paragraph className={styles["content__text"]}>
             When you visit our website
-            <a href="https://theheraapp.com/" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="https://theheraapp.com/"
+              target="_blank"
+            >
               &nbsp;https://theheraapp.com/
             </a>
             (the "Website"), use our mobile application, as the case may be (the
@@ -470,7 +474,10 @@ export const PrivacyPage = (): JSX.Element => {
             unlawfully processing your personal information, you also have the
             right to complain to your local data protection supervisory
             authority. You can find their contact details here:
-            <a href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm">
+            <a
+              rel="noopener noreferrer"
+              href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
+            >
               &nbsp;http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm
             </a>
             .
@@ -478,7 +485,10 @@ export const PrivacyPage = (): JSX.Element => {
           <Paragraph className={styles["content__text"]}>
             If you are a resident in Switzerland, the contact details for the
             data protection authorities are available here:
-            <a href="https://www.edoeb.admin.ch/edoeb/en/home.html">
+            <a
+              rel="noopener noreferrer"
+              href="https://www.edoeb.admin.ch/edoeb/en/home.html"
+            >
               &nbsp;https://www.edoeb.admin.ch/edoeb/en/home.html
             </a>
             .
@@ -486,7 +496,7 @@ export const PrivacyPage = (): JSX.Element => {
           <Paragraph className={styles["content__text"]}>
             If you have questions or comments about your privacy rights, you may
             email us at
-            <a href="mailto:melanie@theheraapp.com">
+            <a rel="noopener noreferrer" href="mailto:melanie@theheraapp.com">
               &nbsp;melanie@theheraapp.com
             </a>
             .
@@ -614,7 +624,7 @@ export const PrivacyPage = (): JSX.Element => {
           <Paragraph className={styles["content__text"]}>
             If you have questions or comments about this notice, you may email
             us at
-            <a href="mailto:melanie@theheraapp.com">
+            <a rel="noopener noreferrer" href="mailto:melanie@theheraapp.com">
               &nbsp;melanie@theheraapp.com
             </a>
             or by post to:

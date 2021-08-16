@@ -13,10 +13,16 @@ export const BlogPreview = ({
   href,
 }: BlogPreviewProps): JSX.Element => {
   return (
-    <section className={cn(styles.card, className)}>
+    <li className={cn(styles.card, className)}>
       <Link href={href}>
-        <a>
-          <Image width={760} height={572} className={styles.image} src={img} />
+        <a aria-label={title}>
+          <Image
+            width={760}
+            height={572}
+            alt={title}
+            className={styles.image}
+            src={img}
+          />
         </a>
       </Link>
       <span className={styles.date}>{date}</span>
@@ -25,6 +31,6 @@ export const BlogPreview = ({
           <Htag tag="h4">{title}</Htag>
         </a>
       </Link>
-    </section>
+    </li>
   );
 };

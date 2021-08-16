@@ -44,6 +44,7 @@ export const TermsPage = (): JSX.Element => {
             Application that are in conflict with the latest
             <a
               href="https://www.apple.com/legal/internet-services/itunes/us/terms.html"
+              rel="noopener noreferrer"
               target="_blank"
             >
               App Store Terms of Service
@@ -169,7 +170,11 @@ export const TermsPage = (): JSX.Element => {
             information, and that Licensor's use of such material and
             information is subject to Your legal agreements with Licensor and
             Licensor's privacy policy:
-            <a href="https://theheraapp.com/privacy/" target="_blank">
+            <a
+              href="https://theheraapp.com/privacy/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               https://theheraapp.com/privacy/
             </a>
             .
@@ -335,6 +340,7 @@ export const TermsPage = (): JSX.Element => {
             delay by e-mail provided in
             <a
               href="https://app.termly.io/dashboard/website/966823/terms-of-service#productclaims"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Product Claims
@@ -413,10 +419,7 @@ export const TermsPage = (): JSX.Element => {
             <br />
             United Arab Emirates
             <br />
-            <a
-              href="mailto:sophie@theheraapp.com
-                "
-            >
+            <a href="mailto:sophie@theheraapp.com" rel="noopener noreferrer">
               sophie@theheraapp.com
             </a>
             <br />

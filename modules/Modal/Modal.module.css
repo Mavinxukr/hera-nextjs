@@ -22,7 +22,7 @@
   right: 0;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .window {
@@ -35,7 +35,7 @@
   left: 50%;
   transition-delay: 0.5s;
   transform: translateX(-50%) translateY(-50%) scale(0);
-  transition: transform 0.2s ease-in;
+  transition: transform 0.3s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;

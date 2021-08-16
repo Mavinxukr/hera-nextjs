@@ -8,7 +8,7 @@
   border: none;
   padding-left: 0;
   border-bottom: 1px solid var(--text);
-  transition: 0.2s;
+  transition: 0.3s;
   outline: none;
 }
 .search.appearance > input {
@@ -16,7 +16,7 @@
 }
 .search svg {
   position: absolute;
-  transition: 0.2s;
+  transition: 0.3s;
   right: 0;
   top: 50%;
   transform: translateY(-50%);

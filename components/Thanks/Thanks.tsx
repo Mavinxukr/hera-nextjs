@@ -7,7 +7,7 @@ import styles from "./Thanks.module.css";
 export const Thanks = (): JSX.Element => {
   return (
     <>
-      <Logo />
+      <Logo nolink={true} />
       <Htag align="center" tag="h2" className={styles.title}>
         Thank you!
       </Htag>
