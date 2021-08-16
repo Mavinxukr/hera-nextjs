@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Htag } from "../Htag/Htag";
 import TextField from "../TextField/TextField";
@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { subscribeThunk } from "../../service/subscribe.service";
+import { ModalContext } from "../../context/MadalContext";
+import { Thanks } from "../Thanks/Thanks";
 
 const postCreateSchema = yup.object().shape({
   email: yup.string().email().required(),
@@ -16,7 +18,7 @@ const postCreateSchema = yup.object().shape({
 export const Subscribe = (): JSX.Element => {
   const [response, setResponse] = useState<any>();
   const [serverErr, setServerErr] = useState<any>(null);
-
+  const context = useContext(ModalContext);
   const {
     register,
     handleSubmit,
@@ -35,6 +37,8 @@ export const Subscribe = (): JSX.Element => {
     if (response && String(response?.status).startsWith("2")) {
       setServerErr(null);
       setValue("email", "");
+      context.setContent(<Thanks />);
+      context.open();
     } else {
       setServerErr(response?.data?.errors);
     }

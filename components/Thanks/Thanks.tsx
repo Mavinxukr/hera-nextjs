@@ -8,7 +8,7 @@ export const Thanks = (): JSX.Element => {
   return (
     <>
       <Logo />
-      <Htag align="center" tag="h3" className={styles.title}>
+      <Htag align="center" tag="h2" className={styles.title}>
         Thank you!
       </Htag>
       <Paragraph align="center" className={styles.text}>

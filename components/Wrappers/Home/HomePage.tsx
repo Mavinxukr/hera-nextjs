@@ -7,8 +7,12 @@ import { IntroContentWrapper } from "../../../modules/IntroContentWrapper/IntroC
 import styles from "./HomePage.module.css";
 import { IllustrationsList } from "../../IllustrationsList/IllustrationsList";
 import { Subscribe } from "../../Subscribe/Subscribe";
+import { Button } from "../../Button/Button";
+import { useContext } from "react";
+import { ModalContext } from "../../../context/MadalContext";
 
 function HomePage(): JSX.Element {
+  const context = useContext(ModalContext);
   interface IIntroSection {
     _id: number;
     title: string;
