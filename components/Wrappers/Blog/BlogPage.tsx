@@ -8,7 +8,7 @@ import styles from "./BlogPage.module.css";
 import { Search } from "../../Search/Search";
 import { BlogTabs } from "../../BlogTabs/BlogTabs";
 import { useRouter } from "next/router";
-import { useState, useEffect, SyntheticEvent } from "react";
+import { useState, useEffect } from "react";
 import { BlogProps } from "../../../interface/blog.interface";
 import {
   importPageInQuery,
