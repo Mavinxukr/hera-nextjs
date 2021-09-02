@@ -63,7 +63,6 @@ export interface IResponsePost {
 }
 
 export const getAllPosts = async ({ page, topic, search} : IFetchPosts ): Promise<IResponsePosts> => {
-  try {
     const response :AxiosResponse<IResponsePosts> = await axios.get('/blog-articles' , {
       params: {
         search,
@@ -71,19 +70,10 @@ export const getAllPosts = async ({ page, topic, search} : IFetchPosts ): Promis
         topic
       }
     });
-    
     return response.data;
-  } catch (error) {
-    throw error.response.data;
-  }
 };
 
-export const getPostById = async ({bid}  : IFetchPost ): Promise<IResponsePost> => {    
-  try {
+export const getPostById = async ({bid}  : IFetchPost ): Promise<IResponsePost | unknown > => {    
     const response :AxiosResponse<IResponsePost> = await axios.get(`/blog-articles/${bid}`);
-    
     return response.data;
-  } catch (error) {
-    throw error.response.data;
-  }
 };

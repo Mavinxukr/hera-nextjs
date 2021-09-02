@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { Loading } from "../../modules/Loading/Loading";
 import { getAllPosts, getPostById } from "../../service/posts.service";
 import { PostProps } from "../../interface/post.interface";
+import axios from "axios";
 
 function Post({ post }: PostProps): JSX.Element {
   const router = useRouter();
@@ -62,7 +63,7 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
   }
 
   try {
-    const post = await getPostById({ bid: Number(bid[0]) });
+    const { data: post } = await await axios.get(`/blog-articles/${bid}`);
 
     if (!post) {
       return {
