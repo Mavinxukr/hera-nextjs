@@ -6,6 +6,9 @@
   justify-content: center;
   margin-bottom: 50px;
 }
+.noresult {
+  margin: 0 auto;
+}
 
 @media (max-width: 768px) {
   .navigation {

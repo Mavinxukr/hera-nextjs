@@ -8,59 +8,113 @@ import styles from "./BlogPage.module.css";
 import { Search } from "../../Search/Search";
 import { BlogTabs } from "../../BlogTabs/BlogTabs";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
 import { BlogProps } from "../../../interface/blog.interface";
-import tabs from "./tabs";
+import {
+  importPageInQuery,
+  importSearchInQuery,
+} from "../../../helpers/posts.helpers";
+import { Loader } from "../../Loader/Loader";
+import { NoResult } from "../../NoResult/NoResult";
 
-export const BlogPage = ({ posts }: BlogProps): JSX.Element => {
-  const [activeTab, setActiveTab] = useState("All");
-  const [updateData, setUpdateDate] = useState(false);
+export const BlogPage = ({ posts, topics }: BlogProps): JSX.Element => {
+  const [updateData, setUpdateData] = useState(false);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const setTab = (slug: string) => {
-    const url = `${router.route}?sort=${slug}`;
-    router.replace(url);
-  };
 
   useEffect(() => {
-    const filters = router.query;
-    console.log("fetch posts by filter", filters);
+    const start = () => {
+      setLoading(true);
+    };
+    const end = () => {
+      setLoading(false);
+    };
+    router.events.on("routeChangeStart", start);
+    router.events.on("routeChangeComplete", end);
+    router.events.on("routeChangeError", end);
+    return () => {
+      router.events.off("routeChangeStart", start);
+      router.events.off("routeChangeComplete", end);
+      router.events.off("routeChangeError", end);
+    };
   }, []);
 
+  const [activeTab, setActiveTab] = useState("All");
+
   useEffect(() => {
-    if (updateData) {
-      setActiveTab("fetch posts");
-    } else {
-      setUpdateDate(true);
+    if (
+      Object.prototype.hasOwnProperty.call(router.query, "topic") &&
+      router.query.topic
+    ) {
+      setActiveTab(router.query.topic as string);
     }
   }, [router.query]);
+
+  const setTopic = (name: string) => {
+    if (name === "All") {
+      router.push(router.route);
+    } else {
+      router.push(`${router.route}?topic=${name}`);
+    }
+  };
 
   return (
     <>
       <Header />
       <Container>
         <div className={styles.navigation}>
-          <BlogTabs setTab={setTab} tabs={tabs} active={activeTab} />
-          <Search changeHandle={(ev) => console.log(ev.target)} />
+          <BlogTabs
+            setTopic={setTopic}
+            topics={[
+              {
+                id: 0,
+                name: "All",
+                counter: 0,
+              },
+              ...topics.data,
+            ]}
+            active={activeTab}
+          />
+          <Search
+            changeHandle={(ev) => {
+              const { value } = ev.target;
+              importSearchInQuery(router, value);
+            }}
+          />
         </div>
         <BlogsList>
-          {posts.map((post) => (
-            <BlogPreview
-              key={post._id}
-              href={post.path}
-              img={post.preview}
-              date={post.date}
-              title={post.title}
-            />
-          ))}
+          {loading && <Loader />}
+          {posts.data.length > 0 ? (
+            posts.data.map((post) => (
+              <BlogPreview
+                key={post.id}
+                href={`/blog/${post.id}`}
+                img={post.cover_image}
+                date={post.date}
+                title={post.title}
+              />
+            ))
+          ) : (
+            <NoResult />
+          )}
         </BlogsList>
         <div className={styles.paginationWrapper}>
-          <Pagination
-            initialPage={1}
-            forcePage={2}
-            pageCount={10}
-            pageRangeDisplayed={2}
-            marginPagesDisplayed={1}
-          />
+          {posts.data.length > 0 && (
+            <Pagination
+              onPageChange={({ selected }) => {
+                if (!updateData) {
+                  setUpdateData(true);
+                } else {
+                  importPageInQuery(router, selected + 1);
+                }
+              }}
+              forcePage={posts.meta.current_page - 1}
+              initialPage={posts.meta.current_page - 1}
+              pageCount={posts.meta.last_page}
+              pageRangeDisplayed={2}
+              marginPagesDisplayed={1}
+            />
+          )}
         </div>
 
         <Subscribe />

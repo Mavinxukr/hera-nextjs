@@ -1,4 +1,7 @@
 module.exports = {
+  images: {
+		domains: ['hera.mavinx.com']
+	},
   webpack(config, options) {
     config.module.rules.push({
       loader: "@svgr/webpack",

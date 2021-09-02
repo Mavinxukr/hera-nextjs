@@ -58,8 +58,15 @@
 
 @media (max-width: 900px) {
   .h2 {
+    font-size: 22px;
+    line-height: 25.82px;
+  }
+
+  .h4 {
+    font-weight: 500;
     font-size: 20px;
     line-height: 24.38px;
+    margin: 0;
   }
 
   .intro {

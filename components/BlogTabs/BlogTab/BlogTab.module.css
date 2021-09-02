@@ -22,10 +22,10 @@
   width: 100%;
 }
 
-.tab.active {
+.tab.active::before {
   position: absolute;
   content: "";
-  bottom: -10px;
+  bottom: -12px;
   transition: 0.3s;
   left: 0;
   width: 100%;

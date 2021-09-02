@@ -2,7 +2,12 @@ import React from "react";
 import { Htag } from "../Htag/Htag";
 import styles from "./PostSidebar.module.css";
 import cn from "classnames";
-import { IPostSidebar } from "../../interface/post.interface";
+import { Subtitle } from "../../service/posts.service";
+
+export interface IPostSidebar {
+  list: Subtitle[];
+  active: number;
+}
 
 export const PostSidebar = ({ list, active }: IPostSidebar): JSX.Element => {
   return (

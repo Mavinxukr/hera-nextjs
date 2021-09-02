@@ -5,7 +5,7 @@ import SearchIcon from "../../public/svg/search.svg";
 import cn from "classnames";
 
 interface ISearch {
-  changeHandle: (ev: React.SyntheticEvent<EventTarget>) => void;
+  changeHandle: (ev: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

@@ -1,13 +1,14 @@
 import { BlogPage } from "../../components/Wrappers/Blog/BlogPage";
 import { withLayout } from "../../modules/Layout";
 import Head from "next/head";
+
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { getAllPosts } from "../../service/posts.service";
+import { getAllTopics, ITopic } from "../../service/topics.service";
 import { BlogProps } from "../../interface/blog.interface";
+import { ParsedUrlQuery } from "querystring";
 
-import { GetServerSideProps } from "next";
-// import axios from "axios";
-import blogs from "../../components/Wrappers/Blog/blogs";
-
-function Blog({ posts }: BlogProps): JSX.Element {
+function Blog({ posts, topics }: BlogProps): JSX.Element {
   return (
     <>
       <Head>
@@ -37,26 +38,39 @@ function Blog({ posts }: BlogProps): JSX.Element {
         <meta name="description" content="the Hera blog" />
         <title>HERA APP | Blog</title>
       </Head>
-      <BlogPage posts={posts} />
+      <BlogPage posts={posts} topics={topics} />
     </>
   );
 }
 
 export default withLayout(Blog);
 
-export const getServerSideProps: GetServerSideProps<BlogProps> = async () => {
-  try {
-    // const resposne = await axios.get("/get-posts", query);
-    // const posts = await resposne.data;
-    const posts = blogs;
-    return {
-      props: {
-        posts,
-      },
-    };
-  } catch {
-    return {
-      notFound: true,
-    };
-  }
-};
+export const getServerSideProps: GetServerSideProps<BlogProps, ParsedUrlQuery> =
+  async ({ query }: GetServerSidePropsContext<ParsedUrlQuery>) => {
+    try {
+      const topics = await getAllTopics();
+      const filters = { ...query };
+
+      if (Object.prototype.hasOwnProperty.call(filters, "topic")) {
+        filters.topic =
+          String(
+            topics.data.filter(
+              (topic: ITopic) => topic.name === filters.topic
+            )[0].id
+          ) || "";
+      }
+
+      const posts = await getAllPosts(filters);
+
+      return {
+        props: {
+          topics,
+          posts,
+        },
+      };
+    } catch {
+      return {
+        notFound: true,
+      };
+    }
+  };
