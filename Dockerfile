@@ -6,6 +6,6 @@ ADD . .
 RUN npm build
 RUN npm prune --production
 CMD ["npm", "start"]
-EXPOSE 3001
+EXPOSE 3000
 
 
