@@ -59,6 +59,7 @@ h2.section__title {
   margin: 0 auto;
   z-index: 1000;
   max-width: 400px;
+  padding: 5px !important;
   will-change: transform;
   transition: transform 0.3s;
 }

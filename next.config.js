@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-		domains: ['hera.mavinx.com']
+		domains: ['hera.mavinx.com', 'https://loading.io']
 	},
   webpack(config, options) {
     config.module.rules.push({

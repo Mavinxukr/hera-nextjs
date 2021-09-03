@@ -4,7 +4,7 @@ import { withLayout } from "../../modules/Layout";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Loading } from "../../modules/Loading/Loading";
-import { getAllPosts, getPostById } from "../../service/posts.service";
+import { getAllPosts } from "../../service/posts.service";
 import { PostProps } from "../../interface/post.interface";
 import axios from "axios";
 
