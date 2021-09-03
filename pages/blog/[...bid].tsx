@@ -4,9 +4,8 @@ import { withLayout } from "../../modules/Layout";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Loading } from "../../modules/Loading/Loading";
-import { getAllPosts } from "../../service/posts.service";
 import { PostProps } from "../../interface/post.interface";
-import axios from "axios";
+import axios from "../../core/axios";
 
 function Post({ post }: PostProps): JSX.Element {
   const router = useRouter();
@@ -40,8 +39,11 @@ function Post({ post }: PostProps): JSX.Element {
 export default withLayout(Post);
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getAllPosts({});
-  const paths: string[] = posts.data.map((post) => `/blog/${post.id}`);
+  const { data: posts } = await axios.get("/all-blog-articles");
+
+  const paths: string[] = posts.data.map(
+    (post: { id: number; title: string }) => `/blog/${post.id}`
+  );
 
   return {
     paths,
@@ -64,7 +66,7 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
   }
 
   try {
-    const { data: post } = await await axios.get(`/blog-articles/${bid}`);
+    const { data: post } = await axios.get(`/blog-articles/${bid}`);
 
     if (!post) {
       return {
