@@ -30,6 +30,7 @@ function Post({ post }: PostProps): JSX.Element {
         <meta property="og:description" content={post.subtitles[0].title} />
         <meta name="description" content={post.subtitles[0].title} />
         <title>{`HERA APP | ${post?.title}`}</title>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Head>
       <PostPage post={post} />
     </>

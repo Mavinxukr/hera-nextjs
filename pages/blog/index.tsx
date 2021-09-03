@@ -37,6 +37,7 @@ function Blog({ posts, topics }: BlogProps): JSX.Element {
         ></meta>
         <meta name="description" content="the Hera blog" />
         <title>HERA APP | Blog</title>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </Head>
       <BlogPage posts={posts} topics={topics} />
     </>

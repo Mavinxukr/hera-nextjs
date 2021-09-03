@@ -3,7 +3,8 @@
 }
 .navigation {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 50px;
 }
 .noresult {
@@ -12,8 +13,6 @@
 
 @media (max-width: 768px) {
   .navigation {
-    flex-direction: column-reverse;
-    align-items: center;
     margin-bottom: 40px;
   }
 }

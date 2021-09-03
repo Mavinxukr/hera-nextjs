@@ -20,6 +20,9 @@
   margin-bottom: 15px;
   margin-top: 10px;
 }
+.link:visited {
+  color: var(--darkBlue);
+}
 
 .image {
   width: 100%;

@@ -2,6 +2,7 @@
   max-width: 171px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .search > input {
   border-radius: 0;
@@ -24,10 +25,4 @@
 
 .search svg.appearance {
   transform: translateY(-50%) translateX(100px);
-}
-
-@media (max-width: 768px) {
-  .search {
-    margin-bottom: 25px;
-  }
 }

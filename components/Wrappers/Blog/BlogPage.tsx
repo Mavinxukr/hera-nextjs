@@ -63,6 +63,12 @@ export const BlogPage = ({ posts, topics }: BlogProps): JSX.Element => {
       <Header />
       <Container>
         <div className={styles.navigation}>
+          <Search
+            changeHandle={(ev) => {
+              const { value } = ev.target;
+              importSearchInQuery(router, value);
+            }}
+          />
           <BlogTabs
             setTopic={setTopic}
             topics={[
@@ -74,12 +80,6 @@ export const BlogPage = ({ posts, topics }: BlogProps): JSX.Element => {
               ...topics.data,
             ]}
             active={activeTab}
-          />
-          <Search
-            changeHandle={(ev) => {
-              const { value } = ev.target;
-              importSearchInQuery(router, value);
-            }}
           />
         </div>
         <BlogsList>
