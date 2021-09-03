@@ -20,7 +20,8 @@
   margin-bottom: 15px;
   margin-top: 10px;
 }
-.link .link:visited {
+.link,
+.link:visited {
   color: var(--darkBlue);
 }
 
