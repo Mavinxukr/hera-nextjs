@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-		domains: ['theheraapp.com']
+		domains: ['back.theheraapp.com']
 	},
   webpack(config, options) {
     config.module.rules.push({
