@@ -47,6 +47,8 @@ export const BlogPage = ({ posts, topics }: BlogProps): JSX.Element => {
       router.query.topic
     ) {
       setActiveTab(router.query.topic as string);
+    } else {
+      setActiveTab("All");
     }
   }, [router.query]);
 

@@ -8,7 +8,7 @@ export function Error404(): JSX.Element {
   return (
     <>
       <Head>
-        <title>{`HERA APP | 404`}</title>
+        <title>HERA APP | 404</title>
       </Head>
       <Header></Header>
       <Error />
