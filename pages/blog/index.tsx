@@ -18,11 +18,11 @@ function Blog({ posts, topics }: BlogProps): JSX.Element {
         />
         <meta
           property="og:image"
-          content="http://theheraapp.com/images/intro.jpg"
+          content="https://www.theheraapp.com/intro.jpg"
         />
         <meta
           name="twitter:image"
-          content="http://theheraapp.com/images/intro.jpg"
+          content="https://www.theheraapp.com/intro.jpg"
         />
         <meta
           property="og:image:alt"
