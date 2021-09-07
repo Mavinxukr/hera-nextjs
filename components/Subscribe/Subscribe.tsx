@@ -34,15 +34,13 @@ export const Subscribe = (): JSX.Element => {
   };
 
   useEffect(() => {
-    console.log("qqq", response);
-
-    if (response && String(response?.status).startsWith("2")) {
+    if (Object.prototype.hasOwnProperty.call(response, "errors")) {
+      setServerErr(response?.errors);
+    } else {
       setServerErr(null);
       setValue("email", "");
       context.setContent(<Thanks />);
       context.open();
-    } else {
-      setServerErr(response?.errors);
     }
   }, [response]);
 

@@ -14,9 +14,8 @@ export const subscribeThunk = async (email:string):Promise<IResponseSubscribe>=>
     try{
         const response:AxiosResponse = await axios.post('/emails', {email});
         return response.data;
-    }catch(error: any ){
-        console.log(error.response);
-        
+
+    }catch(error: any ){      
         return error.response.data;
     }
 };
