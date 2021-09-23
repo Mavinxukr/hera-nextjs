@@ -20,7 +20,7 @@ export const Intro = (): JSX.Element => {
         height="60vh"
         controls
         className={styles.player}
-        url="https://www.youtube.com/watch?v=2OEL4P1Rz04&t=1s" />
+        url="/video/intro_video.mp4" />
     )
     controller.open()
   }

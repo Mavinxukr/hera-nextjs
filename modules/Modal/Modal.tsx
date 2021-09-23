@@ -36,15 +36,18 @@ export const Modal = (): JSX.Element | null => {
     };
   }, []);
 
-  const clickHandler = (event: React.SyntheticEvent<HTMLDivElement>) => {
-    const { type } = event.currentTarget.dataset;
-
-    if (type === "denied") {
-      setOpen(false);
-      setClose(true);
-      setTimeout(() => {
-        modalContext.close();
-      }, 300);
+  const clickHandler = (event: React.SyntheticEvent<EventTarget>) => {
+    if (event.target instanceof HTMLElement) {
+      const { type } = event.target.dataset;
+      if (type === "denied") {
+        setTimeout(() => {
+          setOpen(false);
+          setClose(true);
+          setTimeout(() => {
+            modalContext.close();
+          }, 300);
+        }, 300);
+      }
     }
   };
 
