@@ -15,6 +15,8 @@
 }
 .link {
   transition: 0.3s;
+  font-size: 14px;
+  line-height: 17px;
   color: var(--darkGray);
 }
 .link.active {
@@ -24,6 +26,7 @@
 .count {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,5 +44,10 @@
   .sidebar {
     position: relative;
     top: 0;
+  }
+
+  .link {
+    font-size: 16px;
+    line-height: 19.5px;
   }
 }

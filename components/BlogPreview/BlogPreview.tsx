@@ -25,9 +25,9 @@ export const BlogPreview = ({
           />
         </a>
       </Link>
-      <span className={styles.date}>{date}</span>
+      <span className={styles.date}>Add {date}</span>
       <Link href={href}>
-        <a>
+        <a className={styles.link}>
           <Htag tag="h4">{title}</Htag>
         </a>
       </Link>

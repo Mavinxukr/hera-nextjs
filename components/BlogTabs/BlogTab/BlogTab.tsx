@@ -3,12 +3,16 @@ import { BlogTabProps } from "../BlogTabs.props";
 import styles from "./BlogTab.module.css";
 import cn from "classnames";
 
-export const BlogTab = ({ tab, active, setTab }: BlogTabProps): JSX.Element => {
+export const BlogTab = ({
+  tab,
+  active,
+  setTopic,
+}: BlogTabProps): JSX.Element => {
   return (
     <li
-      onClick={() => setTab(tab.slug)}
+      onClick={() => setTopic(tab.name)}
       className={cn(styles.tab, {
-        [styles.active]: tab.slug === active,
+        [styles.active]: tab.name === active,
       })}
     >
       {tab.name}

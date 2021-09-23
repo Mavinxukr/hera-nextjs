@@ -1,10 +1,15 @@
 import Image from "next/image";
 import React, { useRef } from "react";
-import { IArticleSection } from "../../interface/post.interface";
 import { Htag } from "../Htag/Htag";
 import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./PostSection.module.css";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { Subtitle } from "../../service/posts.service";
+
+export interface ISubtitle extends Subtitle {
+  index: number;
+  setIndex: (index: number) => void;
+}
 
 export const PostSection = ({
   setIndex,
@@ -12,8 +17,8 @@ export const PostSection = ({
   id,
   title,
   text,
-  img,
-}: IArticleSection): JSX.Element => {
+  image,
+}: ISubtitle): JSX.Element => {
   const section = useRef<HTMLDivElement | null>(null);
 
   const paragraphs = text.split(/[\r\n]+/g);
@@ -45,7 +50,7 @@ export const PostSection = ({
         className={styles.img}
         width={1352}
         height={832}
-        src={img}
+        src={image}
       ></Image>
     </section>
   );

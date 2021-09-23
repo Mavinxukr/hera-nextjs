@@ -39,7 +39,6 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
           />
-          {/* <link rel="manifest" href="./images/favicon/site.webmanifest" /> */}
           <link
             rel="mask-icon"
             href="/favicon/safari-pinned-tab.svg"
@@ -55,7 +54,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         </body>
       </Html>
     );

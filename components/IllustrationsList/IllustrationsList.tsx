@@ -9,7 +9,13 @@ export const IllustrationsList = (): JSX.Element => {
       <ul className={styles["illustrations__list"]}>
         {illustrations.map((i, index) => (
           <li key={index} className={styles["illustrations__item"]}>
-            <Image width={206} height={245} src={i.src} alt={i.name} />
+            <Image
+              width={206}
+              height={245}
+              quality={100}
+              src={i.src}
+              alt={i.name}
+            />
           </li>
         ))}
       </ul>

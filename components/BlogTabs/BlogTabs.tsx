@@ -1,23 +1,23 @@
 import React from "react";
+import { ITopic } from "../../service/topics.service";
 import { BlogTab } from "./BlogTab/BlogTab";
 import styles from "./BlogTabs.module.css";
-import { BlogTabsProps, ITab } from "./BlogTabs.props";
+import { BlogTabsProps } from "./BlogTabs.props";
 
 export const BlogTabs = ({
-  tabs,
+  topics,
   active,
-  setTab,
+  setTopic,
 }: BlogTabsProps): JSX.Element => {
   return (
     <div className={styles.wrapper}>
       <ul className={styles.list}>
-        {tabs.map((tab: ITab) => (
+        {topics.map((tab: ITopic) => (
           <BlogTab
             tab={tab}
             active={active}
-            setTab={() => setTab(tab.slug)}
-            key={tab._id}
-            {...tab}
+            setTopic={() => setTopic(tab.name)}
+            key={tab.id}
           />
         ))}
       </ul>
