@@ -39,6 +39,7 @@ export const Intro = (): JSX.Element => {
         height="auto"
         controls
         className={styles.player}
+
         url={
           [
             { src: '/video/intro_video.webm', type: 'video/webm' },
@@ -55,7 +56,7 @@ export const Intro = (): JSX.Element => {
     <ContainerFluid>
       <header className={styles.hidden}>
         <div className={styles.video}>
-          <video className={styles.video_media} src="/video/intro.mp4" autoPlay muted loop>
+          <video className={styles.video_media} src="/video/intro.mp4" autoPlay muted loop playsInline >
           </video>
           <div className={styles.video_content}>
             <div className={styles["intro__logo"]}>
