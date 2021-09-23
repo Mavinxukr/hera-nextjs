@@ -39,7 +39,14 @@ export const Intro = (): JSX.Element => {
         height="auto"
         controls
         className={styles.player}
-        url="/video/intro_video.mp4" />
+        url={
+          [
+            { src: '/video/intro_video.webm', type: 'video/webm' },
+            { src: '/video/intro_video.ogv', type: 'video/ogv' },
+            { src: '/video/intro_video.mp4', type: 'video/mp4' }
+          ]
+        }
+      />
     )
     controller.open()
   }
