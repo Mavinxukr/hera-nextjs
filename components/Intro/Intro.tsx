@@ -42,8 +42,8 @@ export const Intro = (): JSX.Element => {
 
         url={
           [
-            { src: '/video/intro_video.webm', type: 'video/webm' },
-            { src: '/video/intro_video.ogv', type: 'video/ogv' },
+            // { src: '/video/intro_video.webm', type: 'video/webm' },
+            // { src: '/video/intro_video.ogv', type: 'video/ogv' },
             { src: '/video/intro_video.mp4', type: 'video/mp4' }
           ]
         }
