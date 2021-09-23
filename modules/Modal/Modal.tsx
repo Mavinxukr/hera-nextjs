@@ -25,23 +25,29 @@ export const Modal = (): JSX.Element | null => {
       }, 100);
     }
 
+    document.body.style.overflow = "hidden";
+
     return () => {
       const portal = document.body.querySelector(".portal");
+      document.body.style.overflow = "auto";
       if (portal) {
         document.body.removeChild(portal);
       }
     };
   }, []);
 
-  const clickHandler = (event: React.SyntheticEvent<HTMLDivElement>) => {
-    const { type } = event.currentTarget.dataset;
-
-    if (type === "denied") {
-      setOpen(false);
-      setClose(true);
-      setTimeout(() => {
-        modalContext.close();
-      }, 300);
+  const clickHandler = (event: React.SyntheticEvent<EventTarget>) => {
+    if (event.target instanceof HTMLElement) {
+      const { type } = event.target.dataset;
+      if (type === "denied") {
+        setTimeout(() => {
+          setOpen(false);
+          setClose(true);
+          setTimeout(() => {
+            modalContext.close();
+          }, 300);
+        }, 300);
+      }
     }
   };
 
@@ -51,21 +57,21 @@ export const Modal = (): JSX.Element | null => {
 
   return modal
     ? createPortal(
+      <div
+        className={cn(styles.modal, {
+          [styles.open]: open,
+          [styles.close]: close,
+        })}
+      >
         <div
-          className={cn(styles.modal, {
-            [styles.open]: open,
-            [styles.close]: close,
-          })}
+          className={cn(styles.overlay)}
+          data-type="denied"
+          onClick={(ev) => clickHandler(ev)}
         >
-          <div
-            className={cn(styles.overlay)}
-            data-type="denied"
-            onClick={(ev) => clickHandler(ev)}
-          >
-            <div className={styles.window}>{modalContext.content}</div>
-          </div>
-        </div>,
-        modal
-      )
+          <div className={styles.window}>{modalContext.content}</div>
+        </div>
+      </div>,
+      modal
+    )
     : null;
 };
