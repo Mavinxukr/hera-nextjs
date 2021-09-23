@@ -13,31 +13,11 @@ import PlayIcon from '../../public/svg/play.svg';
 
 export const Intro = (): JSX.Element => {
   const controller = useContext<IModalContext>(ModalContext);
-
-  const [mobile, setMobile] = useState<boolean>();
-  console.log(mobile);
-  const resizeWindow = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      setMobile(true)
-    } else {
-      setMobile(false)
-    }
-  }
-
-  useEffect(() => {
-    resizeWindow();
-    window.addEventListener('resize', resizeWindow);
-
-    return () => {
-      window.removeEventListener('resize', resizeWindow);
-    }
-  }, [])
-
   const openModal = () => {
     controller.setContent(
       <Player
-        width={mobile ? 280 : undefined}
-        height={mobile ? 240 : undefined}
+        width="80vw"
+        height="60vh"
         controls
         className={styles.player}
         url="https://www.youtube.com/watch?v=2OEL4P1Rz04" />
