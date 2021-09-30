@@ -8,13 +8,13 @@ import styles from "./HomePage.module.css";
 import { IllustrationsList } from "../../IllustrationsList/IllustrationsList";
 import { Subscribe } from "../../Subscribe/Subscribe";
 
-import baby from '../../../public/baby.png';
-import workouts from '../../../public/workouts.png';
-import kitchen from '../../../public/kitchen.png';
-import yoga from '../../../public/yoga.png';
-import meditation from '../../../public/meditation.png';
-import challenges from '../../../public/challenges.png';
-import more from '../../../public/more.png';
+import baby from '../../../public/home/baby.png';
+import workouts from '../../../public/home/workouts.png';
+import kitchen from '../../../public/home/kitchen.png';
+import yoga from '../../../public/home/yoga.png';
+import meditation from '../../../public/home/meditation.png';
+import challenges from '../../../public/home/challenges.png';
+import more from '../../../public/home/more.png';
 
 interface IIntroSection {
   _id: number;
