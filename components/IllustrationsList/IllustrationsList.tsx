@@ -12,7 +12,6 @@ export const IllustrationsList = (): JSX.Element => {
             <Image
               width={206}
               height={245}
-              quality={100}
               src={i.src}
               alt={i.name}
             />
