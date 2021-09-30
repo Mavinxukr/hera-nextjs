@@ -8,13 +8,13 @@ import styles from "./HomePage.module.css";
 import { IllustrationsList } from "../../IllustrationsList/IllustrationsList";
 import { Subscribe } from "../../Subscribe/Subscribe";
 
-import baby from '../../../public/baby3x.png';
-import workouts from '../../../public/workouts3x.png';
-import kitchen from '../../../public/kitchen3x.png';
-import yoga from '../../../public/yoga3x.png';
-import meditation from '../../../public/meditation3x.png';
-import challenges from '../../../public/challenges3x.png';
-import more from '../../../public/more3x.png';
+import baby from '../../../public/baby.png';
+import workouts from '../../../public/workouts.png';
+import kitchen from '../../../public/kitchen.png';
+import yoga from '../../../public/yoga.png';
+import meditation from '../../../public/meditation.png';
+import challenges from '../../../public/challenges.png';
+import more from '../../../public/more.png';
 
 function HomePage(): JSX.Element {
   interface IIntroSection {
