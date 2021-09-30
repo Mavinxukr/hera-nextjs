@@ -17,6 +17,7 @@ export const BlogPreview = ({
       <Link href={href}>
         <a aria-label={title}>
           <Image
+            unoptimized
             width={760}
             height={572}
             alt={title}

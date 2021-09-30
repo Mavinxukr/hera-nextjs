@@ -40,6 +40,9 @@ export const Intro = (): JSX.Element => {
         controls
         className={styles.player}
         playsinline
+        config={{
+          
+        }}
         url={
           [
             { src: '/video/intro_video.webm', type: 'video/webm' },

@@ -63,11 +63,8 @@ export const IntroSection = ({
         <Image
           width={410}
           height={466}
-          priority
-          quality={100}
           className={styles["section__preview"]}
           src={img}
-          alt={title}
         />
       </div>
     </section>

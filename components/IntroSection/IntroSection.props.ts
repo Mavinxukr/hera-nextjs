@@ -4,6 +4,6 @@ export interface IntroSectionProps extends DetailedHTMLProps<HTMLAttributes<HTML
     _id: number;
     title: string;
     text: string;
-    img: string;
+    img: StaticImageData;
     reverse?: boolean;
 }
