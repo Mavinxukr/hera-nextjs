@@ -46,6 +46,7 @@ export const PostSection = ({
         </Paragraph>
       ))}
       <Image
+        unoptimized
         alt={title}
         className={styles.img}
         width={1352}
