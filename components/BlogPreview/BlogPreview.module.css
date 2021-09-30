@@ -28,6 +28,7 @@
 .image {
   width: 100%;
   transition: 0.3s;
+  object-fit: cover;
 }
 .image:hover {
   transform: scale(1.05);
