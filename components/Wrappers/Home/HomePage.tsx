@@ -8,13 +8,13 @@ import styles from "./HomePage.module.css";
 import { IllustrationsList } from "../../IllustrationsList/IllustrationsList";
 import { Subscribe } from "../../Subscribe/Subscribe";
 
-import baby3x from '../../../public/baby3x.png';
-import workouts3x from '../../../public/workouts3x.png';
-import kitchen3x from '../../../public/kitchen3x.png';
-import yoga3x from '../../../public/yoga3x.png';
-import meditation3x from '../../../public/meditation3x.png';
-import challenges3x from '../../../public/challenges3x.png';
-import more3x from '../../../public/more3x.png';
+import baby from '../../../public/baby3x.png';
+import workouts from '../../../public/workouts3x.png';
+import kitchen from '../../../public/kitchen3x.png';
+import yoga from '../../../public/yoga3x.png';
+import meditation from '../../../public/meditation3x.png';
+import challenges from '../../../public/challenges3x.png';
+import more from '../../../public/more3x.png';
 
 function HomePage(): JSX.Element {
   interface IIntroSection {
@@ -29,49 +29,49 @@ function HomePage(): JSX.Element {
       _id: 1,
       title: "Mother & Baby Development",
       text: "Heras extensive research means you need to look no further, with weekly updates provided by industry experts on the growth and development of mother and baby. Hera also includes baby’s postnatal development and your journey into the fourth trimester.",
-      img: baby3x,
+      img: baby,
       reverse: false,
     },
     {
       _id: 2,
       title: "Personalised Workouts",
       text: "Get fit, strong and healthy with our personalised workout program tailored to your specific stage of pregnancy. The Hera app will become your pre and postpartum coach keeping you feeling good and looking good from the comfort of your own home.",
-      img: workouts3x,
+      img: workouts,
       reverse: true,
     },
     {
       _id: 3,
       title: "Stage Specific Nutrition Plan",
       text: "What you eat during pregnancy has a great impact on your baby’s growth and development. To take the pressure off you, Hera has created nutrient dense, stage specific meals, snacks and smoothies that will support you and your baby’s development.",
-      img: kitchen3x,
+      img: kitchen,
       reverse: false,
     },
     {
       _id: 4,
       title: "Yoga & Meditation",
       text: "Relax and unwind with Hera’s yoga and meditation sessions. These sessions will not only help you and your baby stay calm during pregnancy but prepare you for a positive birth.",
-      img: yoga3x,
+      img: yoga,
       reverse: true,
     },
     {
       _id: 5,
       title: "Postpartum Rehabilitation",
       text: "The Hera App provides you with a detailed 8-week rehabilitation program to prepare you for exercise again.",
-      img: meditation3x,
+      img: meditation,
       reverse: false,
     },
     {
       _id: 6,
       title: "Challenges",
       text: "After Heras 8 – week rehabilitation program, you’ll enter the next phase in the Hera App which allows you to choose from a variety of challenges varying from strength, flexibility, tone, endurance and HIIT. Challenge yourself with as many as you like.",
-      img: challenges3x,
+      img: challenges,
       reverse: true,
     },
     {
       _id: 7,
       title: "More",
       text: "Tips, tricks and advice; Hera’s blog will be your best friend. From what to put in your hospital bag to perineal massage to how to encourage your baby’s development. Hera has everything you need at your fingertips.",
-      img: more3x,
+      img: more,
       reverse: false,
     },
   ];
