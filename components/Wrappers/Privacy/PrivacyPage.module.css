@@ -31,3 +31,19 @@
 .roman-list li::marker {
   font-size: 26px;
 }
+
+@media (max-width: 767px) {
+  .main-list {
+    padding-left: 20px;
+  }
+  .roman-list {
+    padding-left: 20px;
+  }
+  .main-list li::marker {
+    font-size: 14px;
+  }
+
+  .roman-list li::marker {
+    font-size: 14px;
+  }
+}

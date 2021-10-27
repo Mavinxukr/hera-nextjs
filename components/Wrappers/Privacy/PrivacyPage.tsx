@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "../../../modules/Container/Container";
 import { ContainerSmall } from "../../../modules/ContainerSmall/ContainerSmall";
 import { HeaderLight } from "../../../modules/HeaderLight/HeaderLight";
 import { Htag } from "../../Htag/Htag";
@@ -324,16 +325,18 @@ export const PrivacyPage = (): JSX.Element => {
               </Paragraph>
             </li>
           </ul>
-          <Htag className={styles.title} tag="h4">
-            Contact Us
-          </Htag>
-          <Paragraph className={styles["content__text"]}>
-            If there are any questions regarding this privacy policy, you may
-            contact us using the information below.
-          </Paragraph>
-          <a href="mailto:melanie@theheraapp.com">
-            Email: melanie@theheraapp.com
-          </a>
+          <Container>
+            <Htag className={styles.title} tag="h4">
+              Contact Us
+            </Htag>
+            <Paragraph className={styles["content__text"]}>
+              If there are any questions regarding this privacy policy, you may
+              contact us using the information below.
+            </Paragraph>
+            <a href="mailto:melanie@theheraapp.com">
+              Email: melanie@theheraapp.com
+            </a>
+          </Container>
         </div>
         <Subscribe />
       </ContainerSmall>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "../../../modules/Container/Container";
 import { ContainerSmall } from "../../../modules/ContainerSmall/ContainerSmall";
 import { HeaderLight } from "../../../modules/HeaderLight/HeaderLight";
 import { Htag } from "../../Htag/Htag";
@@ -1057,18 +1058,18 @@ export const TermsPage = (): JSX.Element => {
                 saved/stored data in products that are either repaired or
                 replaced.
               </Paragraph>
-              <Htag tag="h4" className={styles["content__title"]}>
-                Contact Us
-              </Htag>
-              <Paragraph className={styles["content__text"]}>
-                Please contact us for any questions or comments (including all
-                inquiries & Complaints) regarding the Services:
-                <a href="mailto:melanie@theheraapp.com">
-                  melanie@theheraapp.com
-                </a>
-              </Paragraph>
             </li>
           </ul>
+          <Container>
+            <Htag tag="h4" className={styles["content__title"]}>
+              Contact Us
+            </Htag>
+            <Paragraph className={styles["content__text"]}>
+              Please contact us for any questions or comments (including all
+              inquiries & Complaints) regarding the Services:
+              <a href="mailto:melanie@theheraapp.com">melanie@theheraapp.com</a>
+            </Paragraph>
+          </Container>
         </div>
         <Subscribe />
       </ContainerSmall>
