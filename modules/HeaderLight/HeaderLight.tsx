@@ -14,7 +14,12 @@ export const HeaderLight = (): JSX.Element => {
             <Logo />
           </div>
           <div className={styles["light-header__buttons"]}>
-            <Button href="#" appearance="social" icon="apple">
+            <Button
+              target="_blank"
+              href="https://apps.apple.com/ua/app/hera-pregnancy-motherhood/id1574922050"
+              appearance="social"
+              icon="apple"
+            >
               App Store
             </Button>
           </div>
