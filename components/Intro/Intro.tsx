@@ -85,10 +85,12 @@ export const Intro = (): JSX.Element => {
               </Htag>
             </div>
             <div className={styles["intro__store"]}>
-              <Paragraph className={styles["intro__subtitle"]}>
-                Coming soon...
-              </Paragraph>
-              <Button href="#" appearance="social" icon="apple">
+              <Button
+                target="_blank"
+                href="https://apps.apple.com/ua/app/hera-pregnancy-motherhood/id1574922050"
+                appearance="social"
+                icon="apple"
+              >
                 App Store
               </Button>
             </div>

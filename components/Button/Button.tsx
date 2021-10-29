@@ -8,10 +8,11 @@ export const Button = ({
   children,
   className,
   href,
+  target,
   ...props
 }: ButtonProps): JSX.Element =>
   href ? (
-    <a href={href}>
+    <a target={target} href={href}>
       <button
         className={cn(
           {
