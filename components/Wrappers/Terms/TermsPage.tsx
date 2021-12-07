@@ -70,7 +70,7 @@ export const TermsPage = (): JSX.Element => {
                     Introduction
                   </Htag>
                   <Paragraph className={styles["content__text"]}>
-                    The Hera App LLC is a …… is a Company registered under the
+                    The Hera App LLC is a Company registered under the
                     Sharjah Media City Free zone, Sharjah, United Arab Emirates
                     and providing a virtual Platform for use electronic
                     web-based platforms for providing registered users to use
