@@ -27,8 +27,8 @@ function Home(): JSX.Element {
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
         ></meta>
         <meta property="og:type" content="product" />
-        <meta property="og:description" content="The Hera App LLC" />
-        <meta name="description" content="The Hera App LLC" />
+        <meta property="og:description" content="the Hera app" />
+        <meta name="description" content="the Hera app" />
         <title>HERA APP</title>
       </Head>
       <HomePage />

@@ -14,7 +14,7 @@ export const PrivacyPage = (): JSX.Element => {
       <HeaderLight />
       <ContainerSmall className={styles.container}>
         <Htag className={styles.title} tag="h1" align="center">
-          Privacy Policy of The Hera App LLC
+          Privacy Policy of The HERA App
         </Htag>
         <div className={styles.content}>
           <ul className={styles["main-list"]}>
@@ -39,7 +39,7 @@ export const PrivacyPage = (): JSX.Element => {
             </li>
             <li>
               <Paragraph className={styles["content__text"]}>
-                The Hera App LLC is an electronic web-based Service platform for
+                The HERA App is an electronic web-based Service platform for
                 providing registered user certain health issues and medical
                 precautions in the time of pregnancy and informative services to
                 facilitate pregnant woman. You agree and acknowledge that HERA
