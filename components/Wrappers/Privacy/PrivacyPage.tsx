@@ -48,7 +48,7 @@ export const PrivacyPage = (): JSX.Element => {
             </li>
             <li>
               <Paragraph className={styles["content__text"]}>
-                We collect User’s information from you when you use HERA App and
+                We collect User’s information from you when you use The Hera App LLC and
                 when you sign up as a User to use a service, we collect more
                 specific personal information about you, such as your name,
                 address, email address, telephone, mobile number, etc. by

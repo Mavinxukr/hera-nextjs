@@ -271,7 +271,7 @@ export const TermsPage = (): JSX.Element => {
               <ul className={styles["alpha-list"]}>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    Hera App contains information woman needs when they realise
+                    The Hera App LLC contains information woman needs when they realise
                     that they are pregnant. This includes; mummy essentials,
                     postpartum essentials, nursery items, hospital bag,
                     information on baby symptoms, baby development,
@@ -318,7 +318,7 @@ export const TermsPage = (): JSX.Element => {
                 </li>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    Hera App provides online platform for users to connect with
+                    The Hera App LLC provides online platform for users to connect with
                     one another on topics listed on the Platform, they are able
                     to ask other users questions or advice and users can
                     answer/communicate with each other.
@@ -341,13 +341,13 @@ export const TermsPage = (): JSX.Element => {
                 </li>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    Hera App offers weekly self-care instructions and advice
+                    The Hera App LLC offers weekly self-care instructions and advice
                     during pregnancy and after
                   </Paragraph>
                 </li>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    Hera App offers weekly self-care suggestions and advice to
+                    The Hera App LLC offers weekly self-care suggestions and advice to
                     women who have input they have lost their baby due to
                     medical complications or miscarriage and this information
                     has been created by a therapist.
@@ -469,7 +469,7 @@ export const TermsPage = (): JSX.Element => {
                     communicating with other users on Chat, message, comments,
                     and Suggestions. We will not be accountable for any kind of
                     incorrect suggestion or act done by other users while using
-                    Hera App services.
+                    The Hera App LLC services.
                   </Paragraph>
                 </li>
                 <li>
