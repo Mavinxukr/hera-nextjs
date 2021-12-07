@@ -14,11 +14,11 @@ export const TermsPage = (): JSX.Element => {
       <HeaderLight />
       <ContainerSmall className={styles.container}>
         <Htag className={styles.title} tag="h1" align="center">
-          The HERA App User’s Terms
+          The Hera App LLC User’s Terms
         </Htag>
         <Paragraph align="center">
-          THIS LEGAL USER’S TERM AGREEMENT BETWEEN YOU AND THE HERA APP GOVERN
-          YOUR USE OF THE HERA APP PRODUCTS, SOFTWARE, SERVICES, WEB APPLICATION
+          THIS LEGAL USER’S TERM AGREEMENT BETWEEN YOU AND The Hera App LLC GOVERN
+          YOUR USE OF The Hera App LLC PRODUCTS, SOFTWARE, SERVICES, WEB APPLICATION
           AND WEBSITE. IT IS IMPORTANT THAT YOU READ AND UNDERSTAND CAREFULLY
           BEFORE USING THE PLATFORM THE FOLLOWING TERMS. BY CLICKING "AGREE,"
           YOU ARE AGREEING THAT THESE TERMS WILL APPLY IF YOU CHOOSE TO ACCESS
@@ -31,7 +31,7 @@ export const TermsPage = (): JSX.Element => {
                 GENERAL
               </Htag>
               <Paragraph className={styles["content__text"]}>
-                The HERA App provides electronic web-based platform and offering
+                The Hera App LLC provides electronic web-based platform and offering
                 registered individual woman <strong>(User)</strong> certain
                 services (the <strong>“Services”</strong>) to facilitate issues
                 related to the Pregnant women to make aware about medical and
@@ -49,7 +49,7 @@ export const TermsPage = (): JSX.Element => {
                 this User Terms please do not access, register with, or use this
                 Platform. Before you may become or continue as a member of the
                 Platform, you must read, agree with, and accept this User Terms
-                and The HERA App’s Privacy Policy (the
+                and The Hera App LLC’s Privacy Policy (the
                 <strong>"Privacy Policy"</strong>). You must read this User
                 Terms and the Privacy Policy (which governs the protection and
                 use of personal information about User) and access and read all
@@ -70,7 +70,7 @@ export const TermsPage = (): JSX.Element => {
                     Introduction
                   </Htag>
                   <Paragraph className={styles["content__text"]}>
-                    The HERA App is a …… is a Company registered under the
+                    The Hera App LLC is a …… is a Company registered under the
                     Sharjah Media City Free zone, Sharjah, United Arab Emirates
                     and providing a virtual Platform for use electronic
                     web-based platforms for providing registered users to use
@@ -312,7 +312,7 @@ export const TermsPage = (): JSX.Element => {
                 </li>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    The Hera App offers a number of yoga sessions, weekly
+                    The Hera App LLC offers a number of yoga sessions, weekly
                     meditations, baby massage, and mum and baby yoga
                   </Paragraph>
                 </li>
@@ -326,7 +326,7 @@ export const TermsPage = (): JSX.Element => {
                 </li>
                 <li>
                   <Paragraph className={styles["content__text"]}>
-                    The Hera App offers an 8-week rehabilitation program
+                    The Hera App LLC offers an 8-week rehabilitation program
                     postpartum (After birth of the child) she must get all clear
                     before beginning this program, otherwise it simply starts at
                     7 weeks postpartum.
